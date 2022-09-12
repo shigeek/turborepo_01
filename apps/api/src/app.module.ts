@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { AppService } from './app.service';
 import { join } from 'path';
+import { AppsResolver } from './apps/apps.resolver';
 
 @Module({
   imports: [
@@ -14,6 +15,6 @@ import { join } from 'path';
       typePaths: undefined, // MEMO: productionでは生成済みのschemaを使う
     }),
   ],
-  providers: [AppService],
+  providers: [AppService, AppsResolver],
 })
 export class AppModule {}
