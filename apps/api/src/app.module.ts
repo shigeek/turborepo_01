@@ -18,6 +18,6 @@ import { TasksModule } from './tasks/task.module';
     }),
     TasksModule,
   ],
-  providers: [AppService, AppsResolver, PrismaService, TasksModule],
+  providers: [AppService, AppsResolver, PrismaService],
 })
 export class AppModule {}
