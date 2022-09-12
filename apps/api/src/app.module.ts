@@ -1,3 +1,4 @@
+import { PrismaService } from './prisma/prisma.service';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
@@ -15,6 +16,6 @@ import { AppsResolver } from './apps/apps.resolver';
       typePaths: undefined, // MEMO: productionでは生成済みのschemaを使う
     }),
   ],
-  providers: [AppService, AppsResolver],
+  providers: [AppService, AppsResolver, PrismaService],
 })
 export class AppModule {}
